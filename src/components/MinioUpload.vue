@@ -69,7 +69,7 @@ const httpRequest = async (options) =>{
 const createMultipartUploadId = async (data)=>{
   return new Promise(resolve => {
     axios.post("/v1/minio/createMultipartUploadId",data).then((response) => {
-      resolve(response.data.uploadId);
+      resolve(response.data.data.uploadId);
     })
   })
 }
@@ -83,7 +83,7 @@ const uploadPartAsync = (data)=>{
   return new Promise(resolve =>{
     // 上传分片
     axios.put("/v1/minio/uploadPartAsync", data, {headers: {'Content-Type': 'multipart/form-data'}}).then((response) => {
-      resolve(response)
+      resolve(response.data.data)
     });
   })
 }
@@ -96,7 +96,7 @@ const uploadPartAsync = (data)=>{
 const completeMultipartUploadAsync = (md5) => {
   return new Promise(resolve => {
     axios.post("/v1/minio/completeMultipartUploadAsync",{fileIdentifier: md5}).then((response)=>{
-      resolve(response);
+      resolve(response.data.data);
     })
   })
 }
