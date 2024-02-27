@@ -68,7 +68,7 @@ const httpRequest = async (options) =>{
  */
 const createMultipartUploadId = async (data)=>{
   return new Promise(resolve => {
-    axios.post("/v1/minio/createMultipartUploadId",data).then((response) => {
+    axios.post("/v1/minio/create-multipart-upload-id",data).then((response) => {
       resolve(response.data.data.uploadId);
     })
   })
