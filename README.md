@@ -1,16 +1,20 @@
-# minio-upload
+# minio-upload-web
 
-## Project setup
+本项目使用 `vue` 构建的一个简单的上传页面。包括分片上传、断点续传、秒传。
+
+## 运行项目
+
+### 下载项目以来
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 启动项目
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 打包项目
 ```
 npm run build
 ```
@@ -20,5 +24,5 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
+### 自定义配置
 See [Configuration Reference](https://cli.vuejs.org/config/).
